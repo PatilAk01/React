@@ -1,0 +1,8 @@
+ step1: npm install -g create-react-app 
+ step2: create-react-app appname
+ step3: cd appname
+
+to open vs code ------- code .
+
+open new terminal 
+ step4: npm start
