@@ -1,0 +1,46 @@
+import React, { useState } from 'react';
+
+const ProductDetailComp = () => {
+  const [products, setproduct] = useState([
+    { Pid: 101, pname: 'Laptop', pprice: 10000, pcompany: 'Asus' },
+    { Pid: 102, pname: 'Mouse', pprice: 2000, pcompany: 'Razer' },
+    { Pid: 103, pname: 'Keyboard', pprice: 2500, pcompany: 'Corsair' },
+    { Pid: 104, pname: 'Monitor', pprice: 50000, pcompany: 'Samsung' },
+    { Pid: 105, pname: 'CPU', pprice: 20000, pcompany: 'Asus' },
+    { Pid: 106, pname: 'SSD Card', pprice: 4000, pcompany: 'Samsung' },
+    { Pid: 107, pname: 'HDD Card', pprice: 7100, pcompany: 'NVIDIA' },
+    { Pid: 108, pname: 'RAM', pprice: 4500, pcompany: 'NVIDIA' },
+    { Pid: 109, pname: 'Graphics Card', pprice: 8500, pcompany: 'NVIDIA Geforce RTX' },
+    { Pid: 110, pname: 'Processor', pprice: 15000, pcompany: 'AMD RYZEN' },
+  ]);
+
+  return (
+    <div>
+      <h1>Product Details</h1>
+      
+      <table border={3}>
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Company</th>
+          </tr>
+        </thead>
+        <tbody>
+          {products.map((product) => (
+            <tr key={product.Pid}>
+              <td>{product.Pid}</td>
+              <td>{product.pname}</td>
+              <td>{product.pprice}</td>
+              <td>{product.pcompany}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    
+    </div>
+  );
+};
+
+export default ProductDetailComp;
